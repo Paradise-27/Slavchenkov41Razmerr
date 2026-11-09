@@ -35,8 +35,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml" />
@@ -58,37 +63,37 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Order.cs">
-      <DependentUpon>slavchenkovDB.tt</DependentUpon>
+      <DependentUpon>SlavchenkovDB.tt</DependentUpon>
     </Compile>
     <Compile Include="OrderProduct.cs">
-      <DependentUpon>slavchenkovDB.tt</DependentUpon>
+      <DependentUpon>SlavchenkovDB.tt</DependentUpon>
     </Compile>
     <Compile Include="PickupPoint.cs">
-      <DependentUpon>slavchenkovDB.tt</DependentUpon>
+      <DependentUpon>SlavchenkovDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Product.cs">
-      <DependentUpon>slavchenkovDB.tt</DependentUpon>
+      <DependentUpon>SlavchenkovDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Role.cs">
-      <DependentUpon>slavchenkovDB.tt</DependentUpon>
+      <DependentUpon>SlavchenkovDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="slavchenkovDB.Context.cs">
+    <Compile Include="SlavchenkovDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>slavchenkovDB.Context.tt</DependentUpon>
+      <DependentUpon>SlavchenkovDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="slavchenkovDB.cs">
+    <Compile Include="SlavchenkovDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>slavchenkovDB.tt</DependentUpon>
+      <DependentUpon>SlavchenkovDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="slavchenkovDB.Designer.cs">
+    <Compile Include="SlavchenkovDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>slavchenkovDB.edmx</DependentUpon>
+      <DependentUpon>SlavchenkovDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="User.cs">
-      <DependentUpon>slavchenkovDB.tt</DependentUpon>
+      <DependentUpon>SlavchenkovDB.tt</DependentUpon>
     </Compile>
     <Page Include="AddEditPage.xaml">
       <SubType>Designer</SubType>
@@ -136,21 +141,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="App.Config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="slavchenkovDB.edmx">
+    <EntityDeploy Include="SlavchenkovDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>slavchenkovDB.Designer.cs</LastGenOutput>
+      <LastGenOutput>SlavchenkovDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="slavchenkovDB.edmx.diagram">
-      <DependentUpon>slavchenkovDB.edmx</DependentUpon>
+    <None Include="SlavchenkovDB.edmx.diagram">
+      <DependentUpon>SlavchenkovDB.edmx</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Img\icon.ico" />
@@ -158,19 +161,19 @@
     <Resource Include="Img\picture.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="slavchenkovDB.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>slavchenkovDB.Context.cs</LastGenOutput>
-      <DependentUpon>slavchenkovDB.edmx</DependentUpon>
-    </Content>
-    <Content Include="slavchenkovDB.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>slavchenkovDB.edmx</DependentUpon>
-      <LastGenOutput>slavchenkovDB.cs</LastGenOutput>
-    </Content>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Content Include="SlavchenkovDB.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SlavchenkovDB.Context.cs</LastGenOutput>
+      <DependentUpon>SlavchenkovDB.edmx</DependentUpon>
+    </Content>
+    <Content Include="SlavchenkovDB.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SlavchenkovDB.edmx</DependentUpon>
+      <LastGenOutput>SlavchenkovDB.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
