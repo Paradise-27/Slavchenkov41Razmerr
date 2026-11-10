@@ -164,6 +164,16 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="photos\B320R5.jpg" />
+    <Resource Include="photos\D329H3.jpg" />
+    <Resource Include="photos\D572U8.jpg" />
+    <Resource Include="photos\F572H7.jpg" />
+    <Resource Include="photos\F635R4.jpg" />
+    <Resource Include="photos\G432E4.jpg" />
+    <Resource Include="photos\G783F5.jpg" />
+    <Resource Include="photos\H782T5.jpg" />
+    <Resource Include="photos\J384T6.jpg" />
+    <Resource Include="photos\А112Т4.jpg" />
     <Content Include="SlavchenkovDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SlavchenkovDB.Context.cs</LastGenOutput>

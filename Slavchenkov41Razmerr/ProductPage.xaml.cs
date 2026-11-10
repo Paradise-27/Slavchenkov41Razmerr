@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Slavchenkov41Razmerr;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,10 +24,9 @@ namespace Slavchenkov41Razmerr
         public ProductPage()
         {
             InitializeComponent();
+            var currentServices = Slavchenkov41Entities.GetContext().Product.ToList();
+            ServiceListView.ItemsSource = currentServices;
         }
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Manager.MainFrame.Navigate(new AddEditPage());
-        }
+
     }
 }

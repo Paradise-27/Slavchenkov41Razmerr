@@ -30,7 +30,21 @@ namespace Slavchenkov41Razmerr
         public byte ProductDiscountAmount { get; set; }
         public byte ProductMaxDiscount { get; set; }
         public int ProductQuantityInStock { get; set; }
-        public string ProductPhoto { get; set; }
+        public string ProductPhoto {get; set;}
+        public string ProductPhotoFull
+        {
+            get
+            {
+                if (this.ProductPhoto != null)
+                {
+                    return "photos/" + ProductPhoto;
+                }
+                else
+                {
+                    return null;
+                }
+            }
+        }
     
         public virtual ICollection<OrderProduct> OrderProduct { get; set; }
     }

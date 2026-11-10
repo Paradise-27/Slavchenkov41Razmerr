@@ -15,6 +15,13 @@ namespace Slavchenkov41Razmerr
     
     public partial class Slavchenkov41Entities : DbContext
     {
+        private static Slavchenkov41Entities _context;
+        public static Slavchenkov41Entities GetContext()
+        {
+            if (_context == null)
+                _context = new Slavchenkov41Entities();
+            return _context;
+                }
         public Slavchenkov41Entities()
             : base("name=Slavchenkov41Entities")
         {
