@@ -20,10 +20,11 @@ namespace Slavchenkov41Razmerr
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
-            MainFrame.Navigate(new ProductPage());
+            MainFrame.Navigate(new AuthPage());
             Manager.MainFrame = MainFrame;
         }
 
@@ -34,7 +35,7 @@ namespace Slavchenkov41Razmerr
         }
         private void MainFrame_ContentRendered(object sender, EventArgs e)
         {
-            if (MainFrame.CanGoBack)
+            if (MainFrame.CanGoBack )
             {
                 BtnBack.Visibility = Visibility.Visible;
             }

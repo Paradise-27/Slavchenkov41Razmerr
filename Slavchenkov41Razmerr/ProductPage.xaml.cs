@@ -56,9 +56,29 @@ namespace Slavchenkov41Razmerr
             TBCount.Text = "Кол-во " + currentServices.Count().ToString() + " из" + allProducts.Count.ToString();
 
         }
-        public ProductPage()
+        public ProductPage(User user)
         {
             InitializeComponent();
+            if (user != null)
+            {
+                FIOTB.Text = "Вы авторизованы как " + user.UserSurname + " " + user.UserName + " " + user.UserPatronymic;
+                switch (user.UserRole)
+                {
+                    case 1:
+                        RoleTB.Text = "Роль: " + "Администратор"; break;
+                    case 2:
+                        RoleTB.Text = "Роль: " + "Клиент"; break;
+                    case 3:
+                        RoleTB.Text = "Роль: " + "Менеджер"; break;
+
+                }
+            }
+            else
+            {
+                FIOTB.Text = "Вы авторизованы как " +  "Гость";
+                RoleTB.Text = "Роль: "+ "Гость";
+            }
+            
             var currentServices = Slavchenkov41Entities.GetContext().Product.ToList();
             ServiceListView.ItemsSource = currentServices;
             ComboType.SelectedIndex = 0;
